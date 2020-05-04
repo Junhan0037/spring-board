@@ -1,0 +1,40 @@
+buildscript {
+    ext {
+        springBootVersion = '2.1.9.RELEASE' // 전역변수 (Version 관리)
+    }
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+// 필수 플러그인들
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management' // 스프링부트의 의존성을 관리해주는 플러그인
+
+// 각종 의존성들을 어떤 원격 저장소에서 받을지 결정
+repositories {
+    mavenCentral()
+    jcenter() // 라이브러리 업로드 난이도 때문에 최근에 많이 사용됨
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+//    compile('org.projectlombok:lombok')
+//    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+//    compile('org.springframework.boot:spring-boot-starter-mustache')
+//    compile('com.h2database:h2')
+//
+//    compile('org.springframework.boot:spring-boot-starter-oauth2-client')
+//    compile('org.springframework.session:spring-session-jdbc')
+//
+//    compile("org.mariadb.jdbc:mariadb-java-client")
+
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+//    testCompile("org.springframework.security:spring-security-test")
+}
