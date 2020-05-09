@@ -1,6 +1,7 @@
 package me.whiteship.springboot.web;
 
 import lombok.RequiredArgsConstructor;
+import me.whiteship.springboot.domain.config.auth.LoginUser;
 import me.whiteship.springboot.domain.config.auth.dto.SessionUser;
 import me.whiteship.springboot.service.PostsService;
 import me.whiteship.springboot.web.dto.PostsResponseDto;
@@ -20,14 +21,12 @@ public class IndexController {
     private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @LoginUser SessionUser user) {
         model. addAttribute("posts", postsService.findAllDesc()); // index.mustache에 posts로 전달
-
-        SessionUser user = (SessionUser) httpSession.getAttribute("user"); // CustomOAuth2UserService클래스에서 로그인 성공 시 세션에 SessionUser를 저장하도록 구현함.
+//        SessionUser user = (SessionUser) httpSession.getAttribute("user"); // CustomOAuth2UserService클래스에서 로그인 성공 시 세션에 SessionUser를 저장하도록 구현함.
         if(user != null) {
             model.addAttribute("userName", user.getName());
         }
-
         return "index"; // index.mustache 호출
     }
 
