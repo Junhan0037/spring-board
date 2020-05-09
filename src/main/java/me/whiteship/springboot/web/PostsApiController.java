@@ -1,12 +1,14 @@
 package me.whiteship.springboot.web;
 
 import lombok.RequiredArgsConstructor;
+import me.whiteship.springboot.domain.posts.PostsRepository;
 import me.whiteship.springboot.service.PostsService;
 import me.whiteship.springboot.web.dto.PostsResponseDto;
 import me.whiteship.springboot.web.dto.PostsSaveRequestDto;
 import me.whiteship.springboot.web.dto.PostsUpdateRequestDto;
 import org.springframework.web.bind.annotation.*;
 
+// 게시물 기능 관련 컨트롤러
 @RequiredArgsConstructor
 @RestController
 public class PostsApiController {
@@ -24,6 +26,13 @@ public class PostsApiController {
     public Long update(@PathVariable Long id,
                        @RequestBody PostsUpdateRequestDto requestDto) {
         return postsService.update(id, requestDto);
+    }
+
+    // 게시물 삭제
+    @DeleteMapping("api/v1/posts/{id}")
+    public Long delete(@PathVariable Long id) {
+        postsService.delete(id);
+        return id;
     }
 
     // 게시물 검색
