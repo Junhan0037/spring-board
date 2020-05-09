@@ -3,7 +3,7 @@ package me.whiteship.springboot.domain.config.auth.dto;
 import lombok.Getter;
 import me.whiteship.springboot.domain.user.User;
 
-// 인증된 사용자 정보
+// 인증된 사용자 정보 dto
 @Getter
 public class SessionUser {
 

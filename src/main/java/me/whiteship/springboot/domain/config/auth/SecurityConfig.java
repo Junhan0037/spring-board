@@ -6,6 +6,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+// 스프링 시큐리티 설정
 @RequiredArgsConstructor
 @EnableWebSecurity // 스프링 시큐리티 설정들을 활성화.
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -30,4 +31,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         .userInfoEndpoint()
                             .userService(customOAuth2UserService); // userService() : 소셜 로그인 성공 시 후속조치를 진행할 구현체 등록.
     }
+
 }

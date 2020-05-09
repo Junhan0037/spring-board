@@ -7,6 +7,7 @@ import me.whiteship.springboot.domain.user.User;
 
 import java.util.Map;
 
+// 구글 로그인 dto
 @Getter
 public class OAuthAttributes {
 
