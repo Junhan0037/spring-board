@@ -1,7 +1,6 @@
 package me.whiteship.springboot.web;
 
 import lombok.RequiredArgsConstructor;
-import me.whiteship.springboot.domain.posts.PostsRepository;
 import me.whiteship.springboot.service.PostsService;
 import me.whiteship.springboot.web.dto.PostsResponseDto;
 import me.whiteship.springboot.web.dto.PostsSaveRequestDto;
