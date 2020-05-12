@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpSession;
 import java.util.Collections;
 
-// 구글 로그인 이후 가져온 사용자의 정보들을 기반으로 기능들을 지원하는 서비스 클래스.
+// 구글 로그인 이후 가져온 사용자의 정보들을 기반으로 다양한 기능(가입 및 정보수정, 세션 저장 등)을 지원하는 서비스 클래스.
 @RequiredArgsConstructor
 @Service
 public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequest, OAuth2User> {
@@ -44,7 +44,7 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
                 attributes.getNameAttributeKey());
     }
 
-    private User saveOrUpdate(OAuthAttributes attributes) {
+    private User saveOrUpdate(OAuthAttributes attributes) { // 구글 사용자 정보가 업데이트 되었을 때를 대비.
         User user = userRepository.findByEmail(attributes.getEmail())
                 .map(entity -> entity.update(attributes.getName(), attributes.getPicture())) // 기존 로그인한 경험이 있는 경우
                 .orElse(attributes.toEntity()); // 처음 가입할 경우
