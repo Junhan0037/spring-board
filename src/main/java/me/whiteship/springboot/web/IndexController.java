@@ -22,7 +22,7 @@ public class IndexController {
 
     @GetMapping("/")
     public String index(Model model, @LoginUser SessionUser user) {
-        model. addAttribute("posts", postsService.findAllDesc()); // index.mustache에 posts로 전달
+        model.addAttribute("posts", postsService.findAllDesc()); // index.mustache에 posts로 전달
 //        SessionUser user = (SessionUser) httpSession.getAttribute("user"); // CustomOAuth2UserService클래스에서 로그인 성공 시 세션에 SessionUser를 저장하도록 구현함.
         if(user != null) {
             model.addAttribute("userName", user.getName());
