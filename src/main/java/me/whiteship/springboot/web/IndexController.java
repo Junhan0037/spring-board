@@ -21,7 +21,7 @@ public class IndexController {
     private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model, @LoginUser SessionUser user) {
+    public String index(Model model, @LoginUser SessionUser user) {  // 메소드 인자로 세션값을 바로 받을 수 있도록 한다.
         model.addAttribute("posts", postsService.findAllDesc()); // index.mustache에 posts로 전달
 //        SessionUser user = (SessionUser) httpSession.getAttribute("user"); // CustomOAuth2UserService클래스에서 로그인 성공 시 세션에 SessionUser를 저장하도록 구현함.
         if(user != null) {
