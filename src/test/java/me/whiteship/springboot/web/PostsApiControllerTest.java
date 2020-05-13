@@ -62,7 +62,7 @@ public class PostsApiControllerTest {
 
     @Test
     @WithMockUser(roles="USER") // 인증된 모의 사용자를 만들어서 사용한다. MockMvc에서만 작동한다.
-    public void Posts_등록된다() throws Exception {
+    public void Posts_save() throws Exception {
         //given
         String title = "title";
         String content = "content";
@@ -93,7 +93,7 @@ public class PostsApiControllerTest {
 
     @Test
     @WithMockUser(roles="USER")
-    public void Posts_수정된다() throws Exception {
+    public void Posts_edit() throws Exception {
         //given
         Posts savedPosts = postsRepository.save(Posts.builder()
                 .title("title")

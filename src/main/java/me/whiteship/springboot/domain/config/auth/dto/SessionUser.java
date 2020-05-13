@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 // 인증된 사용자 정보 dto
 @Getter
-public class SessionUser implements Serializable {
+public class SessionUser implements Serializable { // Serializable : 직렬화
 
     private String name;
     private String email;
