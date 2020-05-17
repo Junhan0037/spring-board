@@ -1,4 +1,4 @@
-package me.whiteship.springboot.domain.config.auth;
+package me.whiteship.springboot.config.auth;
 
 import lombok.RequiredArgsConstructor;
 import me.whiteship.springboot.domain.user.Role;

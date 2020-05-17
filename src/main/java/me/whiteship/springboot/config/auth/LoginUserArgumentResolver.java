@@ -1,7 +1,7 @@
-package me.whiteship.springboot.domain.config.auth;
+package me.whiteship.springboot.config.auth;
 
 import lombok.RequiredArgsConstructor;
-import me.whiteship.springboot.domain.config.auth.dto.SessionUser;
+import me.whiteship.springboot.config.auth.dto.SessionUser;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.support.WebDataBinderFactory;

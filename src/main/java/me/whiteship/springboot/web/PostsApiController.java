@@ -2,10 +2,13 @@ package me.whiteship.springboot.web;
 
 import lombok.RequiredArgsConstructor;
 import me.whiteship.springboot.service.PostsService;
+import me.whiteship.springboot.web.dto.PostsListResponseDto;
 import me.whiteship.springboot.web.dto.PostsResponseDto;
 import me.whiteship.springboot.web.dto.PostsSaveRequestDto;
 import me.whiteship.springboot.web.dto.PostsUpdateRequestDto;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 // 게시물 기능 관련 컨트롤러
 @RequiredArgsConstructor
@@ -38,6 +41,11 @@ public class PostsApiController {
     @GetMapping("/api/v1/posts/{id}")
     public PostsResponseDto findById(@PathVariable Long id) {
         return postsService.findById(id);
+    }
+
+    @GetMapping("/api/v1/posts/list")
+    public List<PostsListResponseDto> findAll() {
+        return postsService.findAllDesc();
     }
 
 }

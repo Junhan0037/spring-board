@@ -1,4 +1,4 @@
-package me.whiteship.springboot.domain.config.auth;
+package me.whiteship.springboot.config.auth;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

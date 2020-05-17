@@ -1,4 +1,4 @@
-package me.whiteship.springboot.domain.config.auth.dto;
+package me.whiteship.springboot.config.auth.dto;
 
 import lombok.Getter;
 import me.whiteship.springboot.domain.user.User;

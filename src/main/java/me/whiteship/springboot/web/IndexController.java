@@ -1,8 +1,8 @@
 package me.whiteship.springboot.web;
 
 import lombok.RequiredArgsConstructor;
-import me.whiteship.springboot.domain.config.auth.LoginUser;
-import me.whiteship.springboot.domain.config.auth.dto.SessionUser;
+import me.whiteship.springboot.config.auth.LoginUser;
+import me.whiteship.springboot.config.auth.dto.SessionUser;
 import me.whiteship.springboot.service.PostsService;
 import me.whiteship.springboot.web.dto.PostsResponseDto;
 import org.springframework.stereotype.Controller;

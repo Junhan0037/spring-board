@@ -1,7 +1,7 @@
-package me.whiteship.springboot.domain.config;
+package me.whiteship.springboot.config;
 
 import lombok.RequiredArgsConstructor;
-import me.whiteship.springboot.domain.config.auth.LoginUserArgumentResolver;
+import me.whiteship.springboot.config.auth.LoginUserArgumentResolver;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;

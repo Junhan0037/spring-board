@@ -1,4 +1,4 @@
-package me.whiteship.springboot.domain.config;
+package me.whiteship.springboot.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;

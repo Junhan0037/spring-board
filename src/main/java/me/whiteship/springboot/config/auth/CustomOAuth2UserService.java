@@ -1,8 +1,8 @@
-package me.whiteship.springboot.domain.config.auth;
+package me.whiteship.springboot.config.auth;
 
 import lombok.RequiredArgsConstructor;
-import me.whiteship.springboot.domain.config.auth.dto.OAuthAttributes;
-import me.whiteship.springboot.domain.config.auth.dto.SessionUser;
+import me.whiteship.springboot.config.auth.dto.OAuthAttributes;
+import me.whiteship.springboot.config.auth.dto.SessionUser;
 import me.whiteship.springboot.domain.user.User;
 import me.whiteship.springboot.domain.user.UserRepository;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
