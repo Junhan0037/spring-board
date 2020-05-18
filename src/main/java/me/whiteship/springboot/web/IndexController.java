@@ -27,7 +27,7 @@ public class IndexController {
         if(user != null) {
             model.addAttribute("userName", user.getName());
         }
-        return "index"; // index.mustache 호출
+        return "index2"; // index2.mustache 호출
     }
 
     @GetMapping("/posts/save")
