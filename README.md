@@ -1,5 +1,4 @@
-# spring-board https://travis-ci.org/Junhan0037/spring-board.svg?branch=master
-
+# spring-board [![Build Status](https://travis-ci.org/Junhan0037/spring-board.svg?branch=master)](https://travis-ci.org/Junhan0037/spring-board.svg?branch=master)
 스프링 부트와 AWS로 구현하는 웹 
 
 ### 개발환경
